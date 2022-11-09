@@ -40,5 +40,31 @@ if (operand === null) {
 } while (!(operand >= 1 || operand < 7)) 
         console.log (operand);
 
-
+for (j = 1; j <= operand; j++ ) {
+    operandNumbers = parseInt(prompt("Enter operand numbers"));
+    if (operandNumbers.length === operand || operandNumbers != isNaN) {
+        console.log(operandNumbers);
+    }  else (alert ("Try again! Enter operand numbers"))
+}
 // 3) Запрашиваем у пользователя каждый операнд. Это должно быть ЧИСЛО. Запрашиваем пока пользователь не введет допустимое значение
+
+// 4) С помощью alert или console.log выводим финальный результат действия (+ - / *).
+finalResult = operandNumbers[0];
+
+for (i = 1; i < operandNumbers.length; i++){
+switch (question) {
+    case '+':
+        finalResult += operandNumbers[i]; 
+    break;
+    case '-':
+        finalResult -= operandNumbers[i]; 
+    break;
+    case '/':
+        finalResult = finalResult / operandNumbers[i]; 
+    break;
+    case '*':
+        finalResult *= operandNumbers[i]; 
+    break;
+}
+}
+console.log(finalResult);
