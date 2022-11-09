@@ -49,7 +49,7 @@ for (j = 1; j <= operand; j++ ) {
 // 3) Запрашиваем у пользователя каждый операнд. Это должно быть ЧИСЛО. Запрашиваем пока пользователь не введет допустимое значение
 
 // 4) С помощью alert или console.log выводим финальный результат действия (+ - / *).
-finalResult = operandNumbers[0];
+finalResult = 0;
 
 for (i = 1; i < operandNumbers.length; i++){
 switch (question) {
@@ -60,11 +60,12 @@ switch (question) {
         finalResult -= operandNumbers[i]; 
     break;
     case '/':
-        finalResult = finalResult / operandNumbers[i]; 
+        finalResult /=  operandNumbers[i]; 
     break;
     case '*':
         finalResult *= operandNumbers[i]; 
     break;
 }
-}
 console.log(finalResult);
+}
+
