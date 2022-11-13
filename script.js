@@ -8,55 +8,55 @@
 
 
 
-do { 
+do {
     question = prompt(`What operation do you want to take: + , - , / , * ?`);
-    if (question === null ) {
-        alert ("Try again!");
-}   else if (question.trim() === '') {
-    alert ("Try again!");
-}
-}
-    while (!(question == '+' || question == '-' || question == '/' || question == '*')) 
-       console.log(question);
-
-do { 
-    operand = parseInt(prompt(`How many operands will you use? (More than 1 less than 7)`))
-if (operand === null) {
-    alert ("Try again!");
-}
-    else if (isNaN(+operand)) {
-        alert ("Try again! It's not a number");
+    if (question === null) {
+        alert("Try again!");
+    } else if (question.trim() === '') {
+        alert("Try again!");
     }
-
-} while (operand >= 7 || operand <= 1) 
-        console.log (operand);
-
-
-
- finalResult = 0;
- for (i = 1; i <= operand; i++){
+}
+while (!(question == '+' || question == '-' || question == '/' || question == '*'))
+console.log(question);
 
 do {
-    number = parseInt(prompt(`Enter the number ${i}`).replaceAll("", " "));
+    operand = parseInt(prompt(`How many operands will you use? (More than 1 less than 7)`))
+    if (operand === null) {
+        alert("Try again!");
+    }
+    else if (isNaN(+operand)) {
+        alert("Try again! It's not a number");
+    }
 
-} while (isNaN(number))
- 
-switch (question) {
-    case "+":
-        finalResult += number; 
-    break;
-    case "-":
-        finalResult = i === 1 ? number : finalResult - number; 
-    break;
-    case "/":
-        finalResult =  i === 1 ? number : finalResult / number; 
-    break;
-    case "*":
-        if(i === 1) finalResult = 1
-        finalResult *= number; 
-    break;
+} while (operand >= 7 || operand <= 1)
+console.log(operand);
+
+
+
+finalResult = 0;
+for (i = 1; i <= operand; i++) {
+
+    do {
+        number = parseInt(prompt(`Enter the number ${i}`).replaceAll("", " "));
+
+    } while (isNaN(number))
+
+    switch (question) {
+        case "+":
+            finalResult += number;
+            break;
+        case "-":
+            finalResult = i === 1 ? number : finalResult - number;
+            break;
+        case "/":
+            finalResult = i === 1 ? number : finalResult / number;
+            break;
+        case "*":
+            if (i === 1) finalResult = 1
+            finalResult *= number;
+            break;
+    }
 }
- }
 console.log(finalResult);
 
 
